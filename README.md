@@ -1,6 +1,6 @@
 #Note that this is based on OpenAI Quickstart (reference)- 
 
-This is a Car Model searching application
+This is a Car Model search application
 
 ##Set Up 
 
