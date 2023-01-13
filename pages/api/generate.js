@@ -59,11 +59,11 @@ export default async function (req, res){
 
 function generatePrompt(car){
     const capitalizedCar = 
-        car[0].toUpperCase() + car.slice(1).toLower.Case();
+        car[0].toUpperCase() + car.slice(1).toLowerCase();
     return `Suggest three car Models that have high horse power.
 
 Car: Car
-Names: Mitsubishi Toyota
+Names: Mitsubishi
 
 car: ${capitalizedCar}
 Names:`;

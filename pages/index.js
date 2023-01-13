@@ -1,10 +1,10 @@
 import Head from "next/head";
 import {useState} from "react";
-import styles from "./index.css"
+import styles from "./index.module.css";
 
 export default function Home(){
-    const [carInput, setCarInput] = userState("");
-    const [result, setResult] = userState();
+    const [carInput, setCarInput] = useState("");
+    const [result, setResult] = useState();
 
     async function onSubmit(event){
         event.preventDefault();
@@ -33,26 +33,25 @@ export default function Home(){
     return(
         <div>
             <Head>
-                <title> OpenAI Quickstart</title>
+                <title> Car Model Search</title>
                 <link rel="icon" href="/car2.png"/>
             </Head>
             
             <main className={styles.main}>
-                <img src="/car2.png" className={style.icon}/>
+                <img src="/car2.png" className={styles.icon}/>
                 <h3>Search Car Model</h3>
                 <form onSubmit={onSubmit}>
                     <input
                         type="text"
                         name="car"
-                        placeholder="Enter a Car"
+                        placeholder="Enter a Car Model"
                         value={carInput}
-                        onChange={(e) =>(e.target.value)}
+                        onChange={(e) => setCarInput(e.target.value)}
                        />
                        <input type="submit" value="Generate names"/>
                 </form>
-                <div className={style.result}>{result}</div>
-            </main>
-            
+                <div className={styles.result}>{result}</div>
+            </main> 
         </div>
     );
 }
