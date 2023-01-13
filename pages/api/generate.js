@@ -15,7 +15,7 @@ export default async function (req, res){
     if (!configuration.apiKey){
         res.status(500).json({
             error:{
-                message: 'API Key is not configured, please follow instructions in READ.me'
+                message: 'API Key is not configured, please follow instructions in README'
             }
         });
         return;
